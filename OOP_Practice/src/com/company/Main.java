@@ -11,13 +11,18 @@ public class Main {
 //        account.withdraw(2);
 //        System.out.println(account.getBalance());
 
-        VIPCustomer person1 = new VIPCustomer();
-        System.out.println(person1.getName());
+//        VIPCustomer person1 = new VIPCustomer();
+//        System.out.println(person1.getName());
+//
+//        VIPCustomer person2 = new VIPCustomer("Bob", 24500.00);
+//        System.out.println(person2.getName());
+//
+//        VIPCustomer person3 = new VIPCustomer("Lance", 10000.22, "lance@email.com");
+//        System.out.println(person3.getName());
 
-        VIPCustomer person2 = new VIPCustomer("Bob", 24500.00);
-        System.out.println(person2.getName());
+        Animal animal = new Animal("Animal", 1, 1, 5, 5);
 
-        VIPCustomer person3 = new VIPCustomer("Lance", 10000.22, "lance@email.com");
-        System.out.println(person3.getName());
+        Dog dog = new Dog("yorkie", 8, 20, 2, 4, 2, 4, 1, 16, "silky");
+        dog.eat();
     }
 }
