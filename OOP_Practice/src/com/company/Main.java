@@ -19,10 +19,26 @@ public class Main {
 //
 //        VIPCustomer person3 = new VIPCustomer("Lance", 10000.22, "lance@email.com");
 //        System.out.println(person3.getName());
+//
+//        Animal animal = new Animal("Animal", 1, 1, 5, 5);
+//
+//        Dog dog = new Dog("yorkie", 8, 20, 2, 4, 2, 4, 1, 16, "silky");
+//        dog.eat();
 
-        Animal animal = new Animal("Animal", 1, 1, 5, 5);
+//        Player player = new Player();
+//        player.name = "Ken";
+//        player.health = 100;
+//        player.weapon = "Axe";
+//
+//        int damage = 94;
+//        player.loseHeatlh(damage);
+//        System.out.println("Remaining health = " + player.healthRemaining());
+//
+//        damage = 44;
+//        player.loseHeatlh(damage);
+//        System.out.println("Remaining health = " + player.healthRemaining());
 
-        Dog dog = new Dog("yorkie", 8, 20, 2, 4, 2, 4, 1, 16, "silky");
-        dog.eat();
+        EncapsulatedPlayer player = new EncapsulatedPlayer("Ken", 100, "Axe");
+        System.out.println("Initial health is " + player.getHealth());
     }
 }
