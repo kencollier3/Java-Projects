@@ -1,5 +1,49 @@
 package com.company;
 
+
+class Movie {
+    private String name;
+
+    public Movie(String name) {
+        this.name = name;
+    }
+
+    public String plot() {
+        return "No plot here";
+    }
+
+    public String getName() {
+        return name;
+    }
+}
+
+class Jaws extends Movie {
+    public Jaws() {
+        super("Jaws");
+    }
+
+    public String plot() {
+        return "A very hungry shark";
+    }
+}
+
+class MazeRunner extends Movie {
+    public MazeRunner() {
+        super("Mazerunner");
+    }
+
+    @Override
+    public String plot() {
+        return "People try to escape a maze";
+    }
+}
+
+class Foregettable extends Movie {
+    public Foregettable() {
+        super("Forgettable");
+    }
+}
+
 public class Main {
 
     public static void main(String[] args) {
@@ -38,7 +82,26 @@ public class Main {
 //        player.loseHeatlh(damage);
 //        System.out.println("Remaining health = " + player.healthRemaining());
 
-        EncapsulatedPlayer player = new EncapsulatedPlayer("Ken", 100, "Axe");
-        System.out.println("Initial health is " + player.getHealth());
+//        EncapsulatedPlayer player = new EncapsulatedPlayer("Ken", 100, "Axe");
+//        System.out.println("Initial health is " + player.getHealth());
+
+       for(int i = 1; i <= 10; i++) {
+           Movie movie = randomMovie();
+           System.out.println("Movie # " + i + " : " + movie.getName() + "\n" + "Plot: " + movie.plot() + "\n");
+       }
+
+    }
+    public static Movie randomMovie() {
+        int randomNumber = (int) (Math.random() * 3) + 1;
+        System.out.println("Random number was: " + randomNumber);
+        switch (randomNumber) {
+            case 1:
+                return new Jaws();
+            case 2:
+                return new MazeRunner();
+            case 3:
+                return new Foregettable();
+        }
+        return null;
     }
 }
